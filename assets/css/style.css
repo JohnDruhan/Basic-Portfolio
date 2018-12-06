@@ -32,9 +32,9 @@ body {
 	clear: both;
   }
   
-  p:last-child {
+  /*p:last-child {
 	margin-bottom: 0;
-  }
+  }*/
   
   h1,
   h2,
@@ -107,11 +107,11 @@ body {
   }
   
   
-  nav a:first-child {
+  /*nav a:first-child {
 	padding-left: 0;
 	margin-left: 0;
 	border-left: 0 none;
-  }
+  }*/
   
   /* footer */
   
@@ -158,9 +158,9 @@ body {
 	overflow: auto;
   }
   
-  .work:nth-child(even) {
+  /*.work:nth-child(even) {
 	margin-right: 40px;
-  }
+  }*/
   
   .work img {
 	width: 100%;
