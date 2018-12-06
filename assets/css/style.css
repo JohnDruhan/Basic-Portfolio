@@ -1,3 +1,17 @@
+/* CSS FOR ALL THREE PAGES --> ALL PAGES USE SAME BASIC STRUCTURE:
+WRAPPER
+SAME HEADER ON ALL PAGES 
+MAIN DIV 
+	ID: "MAIN-CONTENT"
+	CLASS "CONTAINER"
+	CLASS: "MAIN SECTION"
+SAME FOOTER ON ALL PAGES
+
+-----------
+
+********MAIN CSS*********
+ */
+
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 18px;
@@ -5,42 +19,78 @@ body {
 	color: #777;
 	background-image: url(../images/background.png);
   }
-  
+	
+	/* box-sizing: border-box; on an element padding and border are 
+	included in the width and height: Both divs are the same size now
+	*/
 *{
 	box-sizing: border-box;
 	margin: 0;
-  }
+	}
+	
+	/*  Height 100% will stretch to fit the whole width and height of 
+	the browser window */
   
 html, body {
 	height: 100%;
   }
-  
-  /* general */
-  
+	 
+	/* EVERYTHING ON PAGE IS IN 'WRAPPER' for easy overall styling*/
 .wrapper {
 	height: auto;
 	height: 100%;
 	min-height: 100%;
 	margin: 0 auto -100px;
   }
-  
+	
+	/* 3 CONTAINERS ON PAGE: HEADER - MAIN CONTENT - FOOTER */
 .container {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	clear: both;
 	}
-	
+
+
+/* MAIN-CONTENT IS DIV IN CENTER OF PAGE */
+#main-content {
+		padding-top: 5px;
+	}
+
+	/* MAIN-SECTION is CLASS HOLDING "p" TAGS */
+.main-section {
+		float: left;
+		width: 100%;
+		max-width: 960px;
+		padding: 30px;
+		margin: 0 0 40px;
+		background: #fff;
+		border: 1px solid #ddd;
+		}
+
+		/* PHOTO ON INDEX PAGE */
+		
+.my-image {
+			float: left;
+			width: 200px;
+			height: auto;
+			margin-top: 10px;
+			margin-right: 25px;
+		}
+
+	/* text & paragraph tags */
 h2,
 h3,
 p {
   margin-bottom: 20px;
 }
 
+ /* sets margin on last of any "p" tag */
 p:last-child {
   margin-bottom: 0;
 }
-  
+
+ /* HEADER TAG STYLING */
 h1,
 h2,
 h3 {
@@ -48,10 +98,9 @@ h3 {
 	font-weight: bold;
 	color: #4aaaa5;
 	}
-	
   
 h1 {
-	/*padding-bottom: 20px;*/
+	padding-bottom: 20px;
 	font-size: 30px;
 	line-height: 50px;
 	border-bottom: 3px solid #ddd;
@@ -62,8 +111,9 @@ h3 {
 	font-size: 22px;
   }
   
-/* header */
-  
+/* HEADER ON ALL PAGES */
+	
+ /* "MASTHEAD" IS MAIN DIV IN HEADER */
 #masthead {
 	width: 100%;
 	margin: 0 0 30px;
@@ -72,7 +122,8 @@ h3 {
 	background: #fff;
 	border-bottom: 2px solid #ccc;
   }
-  
+	
+	/* 'LOGO' is the MY NAME  */
 #logo {
 	float: left;
 	width: 250px;
@@ -86,7 +137,8 @@ h3 {
 	text-decoration: none;
 	background: #4aaaa5;
   }
-  
+	
+	/* NAVAGATION BAR STYLING */
 nav {
 	float: right;
 	margin-top: 25px;
@@ -109,7 +161,7 @@ nav a:hover {
 	color: #666;
   }
   
-  /* footer */
+  /* FOOTER ON ALL PAGES */
   
 footer {
 	padding: 30px 0;
@@ -121,73 +173,8 @@ footer {
 	border-top: 8px solid #4aaaa5;
   }
   
-h3, h2 {
-	padding-bottom: 20px;
-	margin-bottom: 15px;
-	line-height: 22px;
-	border-bottom: 2px solid #eee;
-  }
   
-  /* main */
-
-#main-content {
-	padding-top: 5px;
-  }
-  
-.main-section {
-	float: left;
-	width: 100%;
-	max-width: 960px;
-	padding: 30px;
-	margin: 0 0 40px;
-	background: #fff;
-	border: 1px solid #ddd;
-	}
-	
-.my-image {
-		float: left;
-		width: 200px;
-		height: auto;
-		margin-top: 10px;
-		margin-right: 25px;
-	}
-  
-  /* portfolio page */
-  
-.work {
-	position: relative;
-	float: left;
-	width: 274px;
-	margin: 20px 0 25px;
-	overflow: auto;
-	}
-	
-	/* SPACE BETWEEN PHOTOS */
-.work:nth-child(even) {
-		margin-right: 40px;
-	}
-
-.work img {
-	width: 100%;
-	border: 0 none;
-  }
-  
-.work h3 {
-	position: absolute;
-	bottom: 20px;
-	width: 100%;
-	padding: 15px;
-	margin-bottom: 0;
-	font-weight: bold;
-	line-height: 30px;
-	color: #fff;
-	text-align: center;
-	background: #4aaaa5;
-	border-bottom: 0;
-  }
-
-  
-  /* contact page */
+  /* THIS IS THE CONTACT PAGE */
   
 #contact-form ul {
 	margin-bottom: 20px;
@@ -228,4 +215,38 @@ input[type=submit] {
 	background: #4aaaa5;
 	border: 0 none;
   }
+	
+	
+	 /* THIS IS THE PORTFOLIO PAGE */
   
+.work {
+	position: relative;
+	float: left;
+	width: 274px;
+	margin: 20px 0 25px;
+	overflow: auto;
+	}
+	
+	/* SPACE BETWEEN PHOTOS */
+.work:nth-child(even) {
+		margin-right: 40px;
+	}
+
+.work img {
+	width: 100%;
+	border: 0 none;
+  }
+  
+.work h3 {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 0;
+	font-weight: bold;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	background: #4aaaa5;
+	border-bottom: 0;
+  }
